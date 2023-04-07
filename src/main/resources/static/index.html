@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>oblig2</title>
+    <script type="application/javascript" src="main.js"></script>
+    <style>
+        .feil{
+            color: red;
+        }
+    </style>
+</head>
+<body onload="visBillett()">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Bestilling av Kinobillett</h2>
+            <form>
+                Velg film:
+                <select id="film">
+                    <option disabled selected>Velg film</option>
+                    <option>Titanic</option>
+                    <option>Love actualy</option>
+                    <option>Home alone</option>
+                    <option>Ariel</option>
+                    <option>Frozen</option>
+                    <option>Moana</option>
+                </select>
+                <div id="feilFilm" class="feil"></div>
+                <br>
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input type="text" id="antall">
+                    <div id="feilAntall" class="feil"></div>
+                </div>
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" id="fornavn" />
+                    <div id="feilFornavn" class="feil"></div>
+                </div>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" id="etternavn" />
+                    <div id="feilEtternavn" class="feil"></div>
+                </div>
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnr</label>
+                    <input type="text" id="telefonnr" />
+                    <div id="feilTelefonnr" class="feil"></div>
+                </div>
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="text" id="epost" />
+                    <div id="feilEpost" class="feil"></div>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="kjopBillett()">Kjøp billett</button>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle biletter</h2>
+            <div id="alleBilletter"></div>
+            <button class="btn btn-danger" onclick="slettBillett()">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
